@@ -1,0 +1,26 @@
+For ques-1, We need to find the total no. of ways to attend classes over N days. So, on each day, we have two choices, either to attend
+or not attend. Therefore, for N days, there will be 2^N ways.
+
+For ques-2, 
+
+To get the probability of missing the graduation ceremony, we need to get the total no. of ways to attend the classes over N days and
+the total no. of ways to attend graduation ceremony without violating the rules.
+
+We will get the total no. of ways to attend the classes over N days from ques-1.
+
+So, the formula becomes,
+
+No. of ways to miss the graduation ceremony = total no. of ways to attend the classes over N days - total no. of ways to attend the 
+graduation ceremony without vioating rules.
+
+As given in the question, if we miss the classes for 4 or more consecutive days then we will not be eligible to attend graduation 
+ceremony. This means that we can miss the classes upto 3 consecutive days and still be eligible to attend the graduation ceremony. to
+calculate this we can make a recurrence relation as
+
+f(x) = sum of classes with miss days and classes without miss days. 
+where f(x) denotes the total no. of ways to attend the graduation ceremony. 
+
+This can be calculated using Knapsack approach. 
+
+In order, to calculate the total no. of ways to attend the classes over N days, we can calculate 2^N, we will be implementing our custom
+method to calculate power instead of using built in function.
