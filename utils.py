@@ -3,7 +3,7 @@ def get_total_no_ways_to_attend_class(days):
     return total_ways
 
 def get_probability_of_missing_graduation_ceremony(ways_to_attend_ceremony, total_ways_to_attend_classes):
-    return f'{total_ways_to_attend_classes - ways_to_attend_ceremony}/{total_ways_to_attend_classes}/{total_ways_to_attend_classes}'
+    return f'({total_ways_to_attend_classes - ways_to_attend_ceremony}/{total_ways_to_attend_classes})/{total_ways_to_attend_classes}'
 
 def power(days):
     '''calculates 2^days'''
